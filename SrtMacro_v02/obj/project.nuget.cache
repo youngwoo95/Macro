@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZLDL0ArBZg7v1py8huICDI/Zsn21ABpdBI1wR42zVL1rdAMFxFr1BAO4NSUVsvc+1lV4P+ZHNyv1ouMeNDW2ag==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\Desktop\\SrtMacro_v02\\SrtMacro_v02\\SrtMacro_v02\\SrtMacro_v02.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\selenium.support\\4.10.0\\selenium.support.4.10.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\selenium.webdriver\\4.10.0\\selenium.webdriver.4.10.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\selenium.webdriver.chromedriver\\114.0.5735.9000\\selenium.webdriver.chromedriver.114.0.5735.9000.nupkg.sha512"
+  ],
+  "logs": []
+}

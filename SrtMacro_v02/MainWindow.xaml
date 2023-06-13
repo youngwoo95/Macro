@@ -1,0 +1,65 @@
+﻿<Window x:Class="SrtMacro_v02.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SrtMacro_v02"
+        mc:Ignorable="d"
+        Background="#a2a0a3"
+        Title="예약 매크로 프로그램v_02"
+        Icon="/Icons/macro.ico"
+        Loaded="Window_Loaded"
+        Height="800"
+        MinHeight="800"
+        Width="1200">
+
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border Background="#1f1c1c">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="imgSelectIcon"/>
+                <Label x:Name="txtSelectTitle" Content="label" VerticalContentAlignment="Center" Foreground="White" FontSize="15" Margin="10 0 0 0"/>
+            </StackPanel>
+        </Border>
+
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Background="#1f1c1c">
+                <Button x:Name="btnSRT" Click="Select_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Icons/srt_ico.ico" Width="100"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="btnKTX" Click="Select_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Icons/KTX.ico" Width="130"/>
+                    </StackPanel>
+                </Button>
+                
+            </StackPanel>
+            <!-- 버튼추가는 여기에 -->
+            
+            <!-- 컴포넌트 -->
+            <Frame x:Name="frame_content" Grid.Column="1" NavigationUIVisibility="Hidden"/>
+        </Grid>
+    </Grid>
+    
+</Window>
