@@ -4,16 +4,16 @@
 exe
 C#
 .cs
-C:\Users\rlady\OneDrive\문서\Macro\SrtMacro_v02\obj\Debug\net6.0-windows\
+C:\Users\user\Documents\Macro\SrtMacro_v02\obj\Debug\net6.0-windows\
 SrtMacro_v02
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\rlady\OneDrive\문서\Macro\SrtMacro_v02\App.xaml
+C:\Users\user\Documents\Macro\SrtMacro_v02\App.xaml
 3-1186027981
 
 92101526290
-197-1045488071
+197-1475034097
 MainWindow.xaml;pageKTX.xaml;PageSRT.xaml;
 
 False

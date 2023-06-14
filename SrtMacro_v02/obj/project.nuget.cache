@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "X9OhTNZOMm675Dj0vNBrrf7QIPnfVsZBJxhYa5mhnTnP1sjxe1G69UabdZyjAM6qBEEbfdta8iH7uTUB9lkbqg==",
+  "dgSpecHash": "si5yPoOffegManVu6rnogzf5zG+R86VYD3NKRo0/1+xvwljUQdFrXFfz4ZVsi1RMLrm7LIWHJFud7RICGq9xww==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rlady\\OneDrive\\문서\\Macro\\SrtMacro_v02\\SrtMacro_v02.csproj",
+  "projectFilePath": "C:\\Users\\user\\Documents\\Macro\\SrtMacro_v02\\SrtMacro_v02.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\rlady\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\rlady\\.nuget\\packages\\selenium.support\\4.10.0\\selenium.support.4.10.0.nupkg.sha512",
-    "C:\\Users\\rlady\\.nuget\\packages\\selenium.webdriver\\4.10.0\\selenium.webdriver.4.10.0.nupkg.sha512",
-    "C:\\Users\\rlady\\.nuget\\packages\\selenium.webdriver.chromedriver\\114.0.5735.9000\\selenium.webdriver.chromedriver.114.0.5735.9000.nupkg.sha512"
+    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\selenium.support\\4.10.0\\selenium.support.4.10.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\selenium.webdriver\\4.10.0\\selenium.webdriver.4.10.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\selenium.webdriver.chromedriver\\114.0.5735.9000\\selenium.webdriver.chromedriver.114.0.5735.9000.nupkg.sha512"
   ],
   "logs": []
 }

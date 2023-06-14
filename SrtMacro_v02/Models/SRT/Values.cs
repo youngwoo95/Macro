@@ -29,7 +29,7 @@ namespace SrtMacro_v02.Models.SRT
             "나주",
             "목포",
         };
-
+        
         /// <summary>
         /// 새로고침 딜레이 타이머
         /// </summary>
