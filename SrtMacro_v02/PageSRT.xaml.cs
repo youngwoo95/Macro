@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.Extensions;
 using OpenQA.Selenium.Support.UI;
-using SrtMacro_v02.Models;
+using SrtMacro_v02.Models.SRT;
 using System;
 using System.IO;
 using System.Linq;
@@ -15,9 +15,6 @@ using System.Windows.Threading;
 
 namespace SrtMacro_v02
 {
-    /// <summary>
-    /// PageSRT.xaml에 대한 상호 작용 논리
-    /// </summary>
     public partial class PageSRT : Page
     {
         /// <summary>
@@ -77,7 +74,10 @@ namespace SrtMacro_v02
             comboStopTime.ItemsSource = Values.EndList.Keys;
 
             comboAdult.ItemsSource = Values.AdultList;
+            comboAdult.SelectedIndex = 0;
+
             comboChild.ItemsSource = Values.ChildList;
+            comboChild.SelectedIndex = 0;
 
             comboDelay.ItemsSource = Values.DelayTime.Keys;
 
@@ -98,6 +98,12 @@ namespace SrtMacro_v02
             }
             catch(Exception ex)
             {
+                Dispatcher.BeginInvoke(DispatcherPriority.Background, new Action(delegate ()
+                {
+                    Log.AppendText($"{ex}\r\n");
+                    Log.ScrollToEnd();
+                }));
+                
                 Console.WriteLine(ex.Message);
             }
 
@@ -132,6 +138,12 @@ namespace SrtMacro_v02
             }
             catch(Exception ex)
             {
+                Dispatcher.BeginInvoke(DispatcherPriority.Background, new Action(delegate ()
+                {
+                    Log.AppendText($"{ex}\r\n");
+                    Log.ScrollToEnd();
+                }));
+                
                 Console.WriteLine(ex.Message);
             }
         }
@@ -173,6 +185,8 @@ namespace SrtMacro_v02
                     Log.AppendText(ex.Message + "\r\n");
                     Log.ScrollToEnd();
                 }));
+
+                Console.WriteLine(ex.Message);
             }
         }
 
@@ -371,6 +385,12 @@ namespace SrtMacro_v02
             }
             catch(StaleElementReferenceException ex)
             {
+                Dispatcher.BeginInvoke(DispatcherPriority.Background, new Action(delegate ()
+                {
+                    Log.AppendText($"{ex}\r\n");
+                    Log.ScrollToEnd();
+                }));
+                
                 Console.WriteLine(ex.Message);
             }
            catch(Exception ex)
@@ -380,6 +400,8 @@ namespace SrtMacro_v02
                     Log.AppendText($"{ex}\r\n");
                     Log.ScrollToEnd();
                 }));
+
+                Console.WriteLine(ex.Message);
             }
         }
 
@@ -404,6 +426,8 @@ namespace SrtMacro_v02
                     Log.AppendText(ex.Message + "\r\n");
                     Log.ScrollToEnd();
                 }));
+
+                Console.WriteLine(ex.Message);
             }
         }
     }

@@ -6,9 +6,133 @@
       xmlns:local="clr-namespace:SrtMacro_v02"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
+      Loaded="Page_Loaded"
+      Background="GhostWhite"
+      SizeChanged="Page_SizeChanged"
       Title="pageKTX">
 
-    <Grid>
-        
-    </Grid>
+    <StackPanel Margin="10">
+        <!-- 회원정보 설정 -->
+        <GroupBox Header="설정" BorderBrush="Black" BorderThickness="1" FontWeight="Bold">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                
+                <!-- 설정 입력부분 -->
+                <TextBlock Text="아이디" Grid.Column="0" Grid.Row="0" FontWeight="Medium" Margin="0 5 0 0"/>
+                <TextBlock Text="비밀번호" Grid.Column="3" Grid.Row="0" FontWeight="Medium" Margin="0 5 0 0"/>
+                <TextBox x:Name="txtId" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Height="30" VerticalContentAlignment="Center" FontWeight="Medium"/>
+                <PasswordBox x:Name="txtPw" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="2" Height="30" VerticalContentAlignment="Center" FontWeight="Medium"/>
+                
+                <!-- 저장버튼 -->
+                <Button x:Name="btnSave"
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Content="저장"
+                        Grid.ColumnSpan="5"
+                        Margin="0 15 0 5"
+                        Height="30"
+                        FontWeight="Bold"
+                        Background="#39385d"
+                        Foreground="White"
+                        Click="btnSave_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Header="예매정보" BorderBrush="Black" BorderThickness="1" FontWeight="Bold">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="0" Grid.Row="0" Text="날짜선택" FontWeight="Medium" Margin="0 5 0 0"/>
+                <DatePicker x:Name="dpTime" Grid.Column="0" Grid.Row="1" FontWeight="Medium"/>
+
+                <TextBlock Grid.Column="3" Grid.Row="0" Text="새로고침 주기" FontWeight="Medium" Margin="0 5 0 0"/>
+                <ComboBox x:Name="comboDelay" Grid.Column="3" Grid.Row="1" FontWeight="Medium"/>
+
+                <TextBlock Grid.Column="0" Grid.Row="2" Text="출발지" FontWeight="Medium" Margin="0 5 0 0"/>
+                <TextBlock Grid.Column="1" Grid.Row="2" Text="도착지" FontWeight="Medium" Margin="0 5 0 0"/>
+                <TextBlock Grid.Column="3" Grid.Row="2" Text="출발시간" FontWeight="Medium" Margin="0 5 0 0"/>
+                <TextBlock Grid.Column="4" Grid.Row="2" Text="도착시간" FontWeight="Medium" Margin="0 5 0 0"/>
+
+                <ComboBox x:Name="comboStartAddress" Grid.Column="0" Grid.Row="3" Margin="0 0 5 0" FontWeight="Medium"/>
+                <ComboBox x:Name="comboStopAddress" Grid.Column="1" Grid.Row="3" Margin="0 0 5 0" FontWeight="Medium"/>
+                <ComboBox x:Name="comboStartTime" Grid.Column="3" Grid.Row="3" Margin="0 0 5 0" FontWeight="Medium"/>
+                <ComboBox x:Name="comboStopTime" Grid.Column="4" Grid.Row="3" Margin="0 0 5 0" FontWeight="Medium"/>
+
+                <TextBlock Grid.Column="0" Grid.Row="4" Text="어른(명)" FontWeight="Medium" Margin="0 5 0 0"/>
+                <TextBlock Grid.Column="1" Grid.Row="4" Text="어린이(명)" FontWeight="Medium" Margin="0 5 0 0"/>
+                <TextBlock Grid.Column="3" Grid.Row="4" Text="유아(명)" FontWeight="Medium" Margin="0 5 0 0"/>
+                <TextBlock Grid.Column="4" Grid.Row="4" Text="경로(명)" FontWeight="Medium" Margin="0 5 0 0"/>
+
+                <ComboBox x:Name="comboAdult" Grid.Column="0" Grid.Row="5" Margin="0 0 5 0" FontWeight="Medium"/>
+                <ComboBox x:Name="comboChildren" Grid.Column="1" Grid.Row="5" Margin="0 0 5 0" FontWeight="Medium"/>
+                <ComboBox x:Name="comboChild" Grid.Column="3" Grid.Row="5" Margin="0 0 5 0" FontWeight="Medium"/>
+                <ComboBox x:Name="comboOld" Grid.Column="4" Grid.Row="5" Margin="0 0 5 0" FontWeight="Medium"/>
+                
+            </Grid>
+        </GroupBox>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnStart" Content="시작" Grid.Column="0" FontWeight="Bold" Height="30" Background="#1785f2" Foreground="White" BorderThickness="0" Margin="5" Click="btnStart_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button x:Name="btnStop" Content="정지" Grid.Column="1" FontWeight="Bold" Height="30" Background="Red" Foreground="White" BorderThickness="0" Margin="5" Click="btnStop_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+        </Grid>
+
+        <RichTextBox x:Name="txtLog" IsReadOnly="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" >
+            <RichTextBox.Resources>
+                <Style TargetType="{x:Type Paragraph}">
+                    <Setter Property="Margin" Value="0"/>
+                </Style>
+            </RichTextBox.Resources>
+        </RichTextBox>
+
+    </StackPanel>
 </Page>

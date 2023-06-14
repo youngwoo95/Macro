@@ -88,3 +88,5 @@ C:\Users\user\Desktop\SrtMacro_v02\SrtMacro_v02\SrtMacro_v02\obj\Debug\net6.0-wi
 C:\Users\user\Desktop\SrtMacro_v02\SrtMacro_v02\SrtMacro_v02\obj\Debug\net6.0-windows\SrtMacro_v02.pdb
 C:\Users\user\Desktop\SrtMacro_v02\SrtMacro_v02\SrtMacro_v02\obj\Debug\net6.0-windows\SrtMacro_v02.genruntimeconfig.cache
 C:\Users\user\Desktop\SrtMacro_v02\SrtMacro_v02\SrtMacro_v02\obj\Debug\net6.0-windows\ref\SrtMacro_v02.dll
+C:\Users\user\Desktop\SrtMacro_v02\SrtMacro_v02\SrtMacro_v02\obj\Debug\net6.0-windows\pageKTX.g.cs
+C:\Users\user\Desktop\SrtMacro_v02\SrtMacro_v02\SrtMacro_v02\obj\Debug\net6.0-windows\pageKTX.baml
