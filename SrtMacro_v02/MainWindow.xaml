@@ -53,7 +53,12 @@
                         <Image Source="/Icons/KTX.ico" Width="130"/>
                     </StackPanel>
                 </Button>
-                
+
+                <Button x:Name="btnBUS" Click="Select_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Icons/bus_ico.ico" Width="100"/>
+                    </StackPanel>
+                </Button>
             </StackPanel>
             <!-- 버튼추가는 여기에 -->
             

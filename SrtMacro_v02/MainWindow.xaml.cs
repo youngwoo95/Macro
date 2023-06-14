@@ -40,6 +40,7 @@ namespace SrtMacro_v02
                     
                     btnSRT.Background = new SolidColorBrush(SelectColor);
                     btnKTX.Background = new SolidColorBrush(OriginalColor);
+                    btnBUS.Background = new SolidColorBrush(OriginalColor);
                     txtSelectTitle.Content = "SRT 예약 매크로 프로그램";
                     break;
                 case "btnKTX":
@@ -47,7 +48,17 @@ namespace SrtMacro_v02
 
                     btnSRT.Background = new SolidColorBrush(OriginalColor);
                     btnKTX.Background = new SolidColorBrush(SelectColor);
+                    btnBUS.Background = new SolidColorBrush(OriginalColor);
                     txtSelectTitle.Content = "KTX 예약 매크로 프로그램";
+                    break;
+                case "btnBUS":
+                    frame.Source = new Uri("PageBUS.xaml", UriKind.Relative);
+
+                    btnSRT.Background = new SolidColorBrush(OriginalColor);
+                    btnKTX.Background = new SolidColorBrush(OriginalColor);
+                    btnBUS.Background = new SolidColorBrush(SelectColor);
+
+                    txtSelectTitle.Content = "BUS 예약 매크로 프로그램";
                     break;
             }
 

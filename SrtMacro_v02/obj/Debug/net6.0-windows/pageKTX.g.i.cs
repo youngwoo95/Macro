@@ -181,7 +181,7 @@ namespace SrtMacro_v02 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SrtMacro_v02;V1.0.0.0;component/pagektx.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SrtMacro_v02;component/pagektx.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\pageKTX.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
