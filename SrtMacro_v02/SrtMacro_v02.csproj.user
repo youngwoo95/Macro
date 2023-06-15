@@ -7,9 +7,6 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="PageBUS.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="pageKTX.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,9 +16,6 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="PageBUS.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="pageKTX.xaml">

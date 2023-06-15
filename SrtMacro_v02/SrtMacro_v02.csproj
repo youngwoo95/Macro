@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Icons\bus_ico.ico" />
     <None Remove="Icons\KTX.ico" />
     <None Remove="Icons\macro.ico" />
     <None Remove="Icons\srt_ico.ico" />
@@ -22,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Icons\bus_ico.ico" />
     <Resource Include="Icons\KTX.ico" />
     <Resource Include="Icons\macro.ico" />
     <Resource Include="Icons\srt_ico.ico" />
