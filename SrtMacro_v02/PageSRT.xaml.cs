@@ -42,6 +42,16 @@ namespace SrtMacro_v02
         /// </summary>
         const double Logheight = 330;
 
+        /// <summary>
+        /// 크롬드라이버 옵션
+        /// </summary>
+        ChromeDriverService driverService;
+
+        /// <summary>
+        /// 크롬드라이버 옵션
+        /// </summary>
+        ChromeOptions options;
+
         public PageSRT()
         {
             InitializeComponent();
@@ -205,7 +215,28 @@ namespace SrtMacro_v02
         private void Work(string _id, string _pw,string _date, string _startaddress, string _stopaddress, string _starttime, string _endtime, string _adult, string _child, int _delay)
         {
             try {
-                using (IWebDriver driver = new ChromeDriver())
+                if (MessageBox.Show("브라우저를 표시하시겠습니까?","알림",MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    driverService = ChromeDriverService.CreateDefaultService();
+                    driverService.HideCommandPromptWindow = false; // 브라우저 표시
+
+                    options = new ChromeOptions();
+                    options.AddArgument("ignore-certificate-errors");
+                    options.PageLoadStrategy = PageLoadStrategy.Default;
+                }
+                else
+                {
+                    driverService = ChromeDriverService.CreateDefaultService();
+                    driverService.HideCommandPromptWindow = true; // 표시안함
+
+                    options = new ChromeOptions();
+                    options.AddArguments("headless"); // 표시안함
+                    options.AddArgument("ignore-certificate-errors");
+                    options.PageLoadStrategy = PageLoadStrategy.Default;
+                }
+
+
+                using (IWebDriver driver = new ChromeDriver(driverService, options))
                 {
                     driver.Url = "https://etk.srail.kr/main.do"; // srt 메인페이지
 

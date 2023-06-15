@@ -51,6 +51,16 @@ namespace SrtMacro_v02
         
         WebDriverWait wait;
 
+        /// <summary>
+        /// 크롬드라이버 옵션
+        /// </summary>
+        ChromeDriverService driverService;
+
+        /// <summary>
+        /// 크롬드라이버 옵션
+        /// </summary>
+        ChromeOptions options;
+
         public pageKTX()
         {
             InitializeComponent();
@@ -211,7 +221,27 @@ namespace SrtMacro_v02
         {
             try
             {
-                using(IWebDriver driver = new ChromeDriver())
+                if (MessageBox.Show("브라우저를 표시하시겠습니까?", "알림", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    driverService = ChromeDriverService.CreateDefaultService();
+                    driverService.HideCommandPromptWindow = false; // 브라우저 표시
+
+                    options = new ChromeOptions();
+                    options.AddArgument("ignore-certificate-errors");
+                    options.PageLoadStrategy = PageLoadStrategy.Default;
+                }
+                else
+                {
+                    driverService = ChromeDriverService.CreateDefaultService();
+                    driverService.HideCommandPromptWindow = true; // 표시안함
+
+                    options = new ChromeOptions();
+                    options.AddArguments("headless"); // 표시안함
+                    options.AddArgument("ignore-certificate-errors");
+                    options.PageLoadStrategy = PageLoadStrategy.Default;
+                }
+
+                using (IWebDriver driver = new ChromeDriver(driverService,options))
                 {
                     driver.Url = "https://www.letskorail.com/index.jsp"; // ktx 메인페이지
                     driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
